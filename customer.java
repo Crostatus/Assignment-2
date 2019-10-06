@@ -1,5 +1,3 @@
-package com.company;
-
 import java.util.Random;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -17,12 +15,6 @@ public class customer implements Runnable {
         i++;
     }
 
-    public customer(String newName) throws NullPointerException {
-        if(newName.equals(null))
-            throw new NullPointerException();
-        this.name = newName;
-    }
-
     public void run() {
         try {
             Date date = new Date();
@@ -33,5 +25,9 @@ public class customer implements Runnable {
         }
         Date date = new Date();
         System.out.println(formatter.format(date) + " " + Thread.currentThread().getName() + " ha servito il cliente " + this.name + " in " + this.delay + " millisecondi.");
+    }
+
+    public static int customerServed(){
+        return i - 1;
     }
 }

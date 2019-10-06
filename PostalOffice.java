@@ -1,5 +1,3 @@
-package com.company;
-
 import java.util.concurrent.*;
 
 public class PostalOffice {
@@ -15,5 +13,9 @@ public class PostalOffice {
 
     public void close() {
         managerSportelli.shutdown();
+    }
+
+    public boolean allCustomersGotServed(){
+        return managerSportelli.isTerminated();
     }
 }
