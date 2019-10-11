@@ -2,6 +2,8 @@ import java.util.Scanner;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.RejectedExecutionException;
 
+
+// Ti scrivo cose random
 public class Main {
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
